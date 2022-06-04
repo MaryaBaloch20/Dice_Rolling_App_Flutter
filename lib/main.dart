@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 void main() {
   return runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
-          title: const Center(child: Text('Dicee')),
+          title: const Center(
+              child: Text(
+            'Dice Rolling App',
+            style: TextStyle(fontSize: 25.0),
+          )),
           backgroundColor: Colors.red,
         ),
         body: DicePage(),
