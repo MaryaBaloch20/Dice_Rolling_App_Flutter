@@ -24,16 +24,12 @@ class DicePage extends StatelessWidget {
         //Adding Dice Images in the UI.
         children: [
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Image.asset('images/dice1.png'),
-            ),
+            child: TextButton(
+                onPressed: () {}, child: Image.asset('images/dice1.png')),
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Image.asset('images/dice1.png'),
-            ),
+            child: TextButton(
+                onPressed: () {}, child: Image.asset('images/dice1.png')),
           ),
         ],
       ),
