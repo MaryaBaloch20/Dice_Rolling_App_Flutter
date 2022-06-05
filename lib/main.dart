@@ -24,17 +24,22 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var leftButtonNo = 5;
+    var rightButtonNo = 6;
+
     return Center(
       child: Row(
         //Adding Dice Images in the UI.
         children: [
           Expanded(
             child: TextButton(
-                onPressed: () {}, child: Image.asset('images/dice1.png')),
+                onPressed: () {},
+                child: Image.asset('images/dice$leftButtonNo.png')),
           ),
           Expanded(
             child: TextButton(
-                onPressed: () {}, child: Image.asset('images/dice1.png')),
+                onPressed: () {},
+                child: Image.asset('images/dice$rightButtonNo.png')),
           ),
         ],
       ),
