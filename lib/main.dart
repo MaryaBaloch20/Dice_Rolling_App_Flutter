@@ -31,6 +31,14 @@ class _DicePageState extends State<DicePage> {
   //Variables Used for Image number.
   int leftButtonNo = 1;
   int rightButtonNo = 1;
+
+  void changeDiceFace() {
+    setState(() {
+      leftButtonNo = Random().nextInt(6) + 1;
+      rightButtonNo = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -40,18 +48,14 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
                 onPressed: () {
-                  setState(() {
-                    leftButtonNo = Random().nextInt(6) + 1;
-                  });
+                  changeDiceFace();
                 },
                 child: Image.asset('images/dice$leftButtonNo.png')),
           ),
           Expanded(
             child: TextButton(
                 onPressed: () {
-                  setState(() {
-                    rightButtonNo = Random().nextInt(6) + 1;
-                  });
+                  changeDiceFace();
                 },
                 child: Image.asset('images/dice$rightButtonNo.png')),
           ),
