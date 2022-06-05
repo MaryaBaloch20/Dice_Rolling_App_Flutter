@@ -21,24 +21,37 @@ void main() {
 }
 
 //DicePage Class used as Body
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  @override
+  State<DicePage> createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  //Variables Used for Image number.
+  int leftButtonNo = 4;
+  int rightButtonNo = 6;
   @override
   Widget build(BuildContext context) {
-    var leftButtonNo = 5;
-    var rightButtonNo = 6;
-
     return Center(
       child: Row(
         //Adding Dice Images in the UI.
         children: [
           Expanded(
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    leftButtonNo = 1;
+                  });
+                },
                 child: Image.asset('images/dice$leftButtonNo.png')),
           ),
           Expanded(
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    rightButtonNo = 2;
+                  });
+                },
                 child: Image.asset('images/dice$rightButtonNo.png')),
           ),
         ],
